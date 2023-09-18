@@ -1,8 +1,12 @@
 # File Compression Utility
 An efficient file compression utility built using Spring Boot, enabling users to compress and decompress files in various formats with ease.
 
+---
+
 ## Overview
 This project is a versatile file compression utility built using Java 11, Gradle, MySQL, and Spring. It provides a simple and efficient way to compress and decompress files in various formats, streamlining your file management tasks. Whether you need to reduce storage space or transmit data more efficiently, this utility has you covered.
+
+---
 
 ## Features
 
@@ -14,6 +18,8 @@ This project is a versatile file compression utility built using Java 11, Gradle
 - **Secure:** Protect your data with robust encryption options.
 - **Database Integration:** Store metadata and compression history in a MySQL database.
 
+---
+
 ## Prerequisites
 
 Before getting started, ensure you have the following installed:
@@ -23,10 +29,27 @@ Before getting started, ensure you have the following installed:
 - MySQL
 - Spring Boot
 
+---
+
 ## Getting Started
 
 1. Clone this repository to your local machine:
 
    ```sh
    git clone https://github.com/avalokkumar/file-compression.git
+   ```
+
+2. Build the project
+   ```sh
+   ./gradlew clean build
+   ```
+
+3. Run the application
+   ```sh
+   ./gradlew :bootRun
+   ```
+
+4. Execute the curl
+   ```sh
+   curl --location 'localhost:8080/api/compress/LZW' \ --form 'file=@"/Users/{username}/Documents/image001.png"'
    ```
